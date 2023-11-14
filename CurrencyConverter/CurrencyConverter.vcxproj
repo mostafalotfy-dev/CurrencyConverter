@@ -143,23 +143,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Application.cpp" />
     <ClCompile Include="Currency.cpp" />
     <ClCompile Include="CurrencyConverter.cpp" />
     <ClCompile Include="CurrencyTable.cpp" />
     <ClCompile Include="Director.cpp" />
+    <ClCompile Include="HelpTable.cpp" />
     <ClCompile Include="HTTP.cpp" />
-    <ClCompile Include="ListParser.cpp" />
     <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Application.h" />
     <ClInclude Include="Currency.h" />
     <ClInclude Include="CurrencyTable.h" />
     <ClInclude Include="Director.h" />
+    <ClInclude Include="HelpTable.h" />
     <ClInclude Include="HTTP.h" />
-    <ClInclude Include="ListParser.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>

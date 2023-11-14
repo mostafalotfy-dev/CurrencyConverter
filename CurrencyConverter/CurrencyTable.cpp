@@ -1,5 +1,5 @@
 #include "CurrencyTable.h"
-
+using namespace Tables;
 CurrencyTable::CurrencyTable()
 {
 	Header();

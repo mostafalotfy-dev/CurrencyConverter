@@ -2,6 +2,7 @@
 #include "tabulate/table.hpp"
 #include "cpr/cpr.h"
 using namespace tabulate;
+namespace Tables{
 class CurrencyTable :
     public Table
 {
@@ -20,3 +21,4 @@ public:
 
 };
 
+}

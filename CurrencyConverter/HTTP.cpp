@@ -1,21 +1,33 @@
 #include "HTTP.h"
 #include "Utils.h"
+SDK::HTTP::HTTP()
+{
+}
 SDK::HTTP::HTTP(std::string url)
 {
-	this->url = cpr::Url{ url };
+	url_ = cpr::Url{ url };
 }
-SDK::HTTP::~HTTP() {
-
+SDK::HTTP::~HTTP()
+{
+	
 }
 
-Json::Value SDK::HTTP::send() {
+SDK::HTTP* SDK::HTTP::send()  {
 
 	
-	cpr::Response response = cpr::Get(url, cpr::Header{ {"Authentication",token} });
+	cpr::Response response = cpr::Get(url_, cpr::Header{ {"Authentication",token} });
 	
-	std::string text = response.text;
-	return Utils::Utils::parseJson(text);
+	responseText = response.text;
+	return this;
 	
+}
+Json::Value SDK::HTTP::json()
+{
+	return Utils::Utils::parseJson(responseText);
+}
+std::string SDK::HTTP::text()
+{
+	return responseText;
 }
 SDK::HTTP* SDK::HTTP::setBearer(std::string token)
 {

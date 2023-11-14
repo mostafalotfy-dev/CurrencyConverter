@@ -6,15 +6,17 @@ namespace SDK {
 	
 	private:
 		std::string token = "";
-		cpr::Url url;
-		HTTP();
-	public:
+		cpr::Url url_;
+		std::string responseText;
 		
+	public:
+		HTTP();
 		HTTP(std::string url);
 		~HTTP();
 		HTTP* setBearer(std::string token);
-		Json::Value send();
-
+		HTTP* send() ;
+		Json::Value json();
+		std::string text();
 
 	};
 }
