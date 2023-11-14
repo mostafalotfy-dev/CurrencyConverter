@@ -1,0 +1,8 @@
+Package: tabulate
+Version: 1.5
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 67639acfc068e649415865a43f4a7130501d68c8d3b83b62a7032b7dbdefc5d6
+Description: Table maker for modern C++
+Status: install ok installed

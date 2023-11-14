@@ -1,0 +1,11 @@
+{
+  "name": "currency-converter",
+  "version": "1.0.0",
+  "dependencies": [
+    "tabulate",
+    "cpr",
+    "argh",
+    "jsoncpp"
+
+  ]
+}
