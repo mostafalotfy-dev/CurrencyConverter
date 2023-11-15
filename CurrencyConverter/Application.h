@@ -13,10 +13,10 @@ namespace App {
 		Tables::CurrencyTable currency_table;
 
 	public:
-		Application(char * argv[]);
+		Application(int argc ,char * argv[]);
 		~Application();
 		void listCurrencies();
-		void showHelp();
+		void showHelp(bool show);
 
 
 

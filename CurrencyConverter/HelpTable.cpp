@@ -7,5 +7,4 @@ HelpTable::HelpTable()
 	add_row({ "-l","--list","List All Currenciess" });
 	format().background_color(Color::cyan).font_background_color(Color::blue);
 
-	
 }
