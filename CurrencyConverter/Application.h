@@ -5,13 +5,15 @@
 namespace App {
 	class Application
 	{
+		const std::string API_KEY = "70a71fdbff0044e6abcb258300dfb55f";
 	private:
 		argh::parser cmdl;
-		SDK::HTTP request;
+		SDK::HTTP* request ;
 		Tables::CurrencyTable currency_table;
 
 	public:
-		Application();
+		Application(char * argv[]);
+		~Application();
 		void listCurrencies();
 		void showHelp();
 

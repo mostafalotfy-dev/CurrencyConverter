@@ -1,7 +1,9 @@
 ﻿#include "Application.h"
 #include <iostream>
-int main()
+int main(int argc , char* argv[])
 {
-	App::Application app = App::Application();
+	App::Application app(argv);
+	
+	return 0;
 
 }

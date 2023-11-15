@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <API_KEY>cur_live_rzJ4HghXqdWb4Uk0Ll8QyVd4q2YA3UkFRFsqwtOy</API_KEY>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="API_KEY">
+      <Value>$(API_KEY)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

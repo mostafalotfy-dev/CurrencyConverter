@@ -1,7 +1,9 @@
 #include "HTTP.h"
 #include "Utils.h"
+#include <iostream>
 SDK::HTTP::HTTP()
 {
+
 }
 SDK::HTTP::HTTP(std::string url)
 {
@@ -12,11 +14,17 @@ SDK::HTTP::~HTTP()
 	
 }
 
-SDK::HTTP* SDK::HTTP::send()  {
+SDK::HTTP* SDK::HTTP::send() {
+
+	cpr::Response response = cpr::Get(url_, cpr::Header{ {"Authentication",token} }, cpr::ProgressCallback([&](cpr::cpr_off_t downloadTotal, cpr::cpr_off_t downloadNow, cpr::cpr_off_t uploadTotal,cpr::cpr_off_t uploadNow, intptr_t userdata) -> bool
+		{
+			std::cout << "Loading... " << downloadNow << " / " << downloadTotal << " bytes." << std::endl;
+			return true;
+		}));
+
 
 	
-	cpr::Response response = cpr::Get(url_, cpr::Header{ {"Authentication",token} });
-	
+
 	responseText = response.text;
 	return this;
 	
