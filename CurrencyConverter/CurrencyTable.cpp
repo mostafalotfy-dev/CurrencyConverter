@@ -6,11 +6,11 @@ CurrencyTable::CurrencyTable()
 	Header();
 	
 	
-	
 }
 
 CurrencyTable::~CurrencyTable()
 {
+
 }
 
 void Tables::CurrencyTable::Body(Json::Value body)
@@ -23,7 +23,7 @@ void Tables::CurrencyTable::Body(Json::Value body)
 		add_row({ output });
 		
 	}
-	print(std::cout);
+	
 	
 }
 

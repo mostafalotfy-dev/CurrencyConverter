@@ -2,6 +2,7 @@
 #include "argh.h"
 #include "HTTP.h"
 #include "CurrencyTable.h"
+#include "HelpTable.h"
 namespace App {
 	class Application
 	{
