@@ -1,7 +1,7 @@
-#include "Application.h"
+#include "ConsoleApplication.h"
 using namespace App;
 
-Application::Application(int argc ,char *argv[]): cmdl(argv)
+ConsoleApplication::ConsoleApplication(int argc ,char *argv[]): cmdl(argv)
 {
 	cmdl.parse(argv);
 	request = new SDK::HTTP("https://api.currencyfreaks.com/v2.0/rates/latest?apikey=" + API_KEY);
@@ -15,12 +15,12 @@ Application::Application(int argc ,char *argv[]): cmdl(argv)
 }
 
 
-App::Application::~Application()
+App::ConsoleApplication::~ConsoleApplication()
 {
 	delete request;
 }
 
-void Application::listCurrencies()
+void ConsoleApplication::listCurrencies()
 {
 	
 	if (cmdl[{"-l", "--list"}])
@@ -34,7 +34,7 @@ void Application::listCurrencies()
 }
 
 
-void Application::showHelp(bool show)
+void ConsoleApplication::showHelp(bool show)
 {
 	if (cmdl[{"-h", "--help"}] || show)
 	{

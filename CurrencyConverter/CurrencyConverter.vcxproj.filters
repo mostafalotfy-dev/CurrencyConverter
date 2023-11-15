@@ -36,7 +36,7 @@
     <ClCompile Include="Currency.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Application.cpp">
+    <ClCompile Include="ConsoleApplication.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HelpTable.cpp">
@@ -65,7 +65,7 @@
     <ClInclude Include="Currency.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Application.h">
+    <ClInclude Include="ConsoleApplication.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="HelpTable.h">
