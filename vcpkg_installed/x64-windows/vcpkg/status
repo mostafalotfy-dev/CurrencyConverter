@@ -573,3 +573,31 @@ Abi: c7c05ccb15a413edce084f42b038d85898dac74a9caa0110f2a17c6d649b19c6
 Description: Fast, direct and static typed parsing of JSON with C++
 Status: purge ok not-installed
 
+Package: matplotplusplus
+Version: 1.2.0
+Port-Version: 1
+Depends: cimg, nodesoup, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: f8c9e9a6a4d45dfbdd8bb5080acb73da64f22dd2db784ef3706117c608c561b3
+Description: A C++ graphics library for data visualization
+Status: purge ok not-installed
+
+Package: cimg
+Version: 2.9.9
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: e04c41cbf4e290864c70fc314de6994c9d9c965e241bb242f8ab021ad730fd56
+Description: The CImg Library is a small, open-source, and modern C++ toolkit for image processing
+Status: purge ok not-installed
+
+Package: nodesoup
+Version: 2023-06-12
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 75ea77fcd7678f722e56046ab6be30314b1155386a4015e535a49e19b5c5cc5d
+Description: Force-directed graph layout with Fruchterman-Reingold
+Status: purge ok not-installed
+

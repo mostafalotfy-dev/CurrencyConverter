@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/cpr-x64-windows-1.10.5#1-4ac5f670-7dc5-4d01-b82d-6ad2cc0fdb9b",
-  "name": "cpr:x64-windows@1.10.5#1 2c96461dffc360bc9dab5e3996598c1d5b6e01ac426cdf993b4f31cae19ce50f",
+  "documentNamespace": "https://spdx.org/spdxdocs/cpr-x64-windows-1.10.5#1-43943c77-b11e-4629-ab67-15c44f3bacd1",
+  "name": "cpr:x64-windows@1.10.5#1 93e74d72aa802b60c7b981179f59b6b55022e8067e95faf9910dfb8e90278f87",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-27de5b69dac4b6fe8259d283cd4011e6d20a84ce"
     ],
-    "created": "2023-11-12T22:27:30Z"
+    "created": "2023-11-15T16:06:02Z"
   },
   "relationships": [
     {
@@ -79,7 +79,7 @@
     {
       "name": "cpr:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "2c96461dffc360bc9dab5e3996598c1d5b6e01ac426cdf993b4f31cae19ce50f",
+      "versionInfo": "93e74d72aa802b60c7b981179f59b6b55022e8067e95faf9910dfb8e90278f87",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",

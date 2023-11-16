@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/tabulate-x64-windows-1.5-a4c8d333-9110-49a9-a229-300b4c57210d",
-  "name": "tabulate:x64-windows@1.5 67639acfc068e649415865a43f4a7130501d68c8d3b83b62a7032b7dbdefc5d6",
+  "documentNamespace": "https://spdx.org/spdxdocs/tabulate-x64-windows-1.5-6b5328aa-e08e-40f5-a2a1-77de536d1ae0",
+  "name": "tabulate:x64-windows@1.5 5bdfe545ce6f237f3f5e0478199243efe700cab3f8c146a1d7496b32a951b80b",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-27de5b69dac4b6fe8259d283cd4011e6d20a84ce"
     ],
-    "created": "2023-11-11T22:31:28Z"
+    "created": "2023-11-15T16:07:30Z"
   },
   "relationships": [
     {
@@ -48,7 +48,7 @@
       "name": "tabulate",
       "SPDXID": "SPDXRef-port",
       "versionInfo": "1.5",
-      "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/tabulate",
+      "downloadLocation": "NOASSERTION",
       "homepage": "https://github.com/p-ranav/tabulate",
       "licenseConcluded": "MIT AND BSL-1.0 AND BSD-3-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -59,7 +59,7 @@
     {
       "name": "tabulate:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "67639acfc068e649415865a43f4a7130501d68c8d3b83b62a7032b7dbdefc5d6",
+      "versionInfo": "5bdfe545ce6f237f3f5e0478199243efe700cab3f8c146a1d7496b32a951b80b",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT AND BSL-1.0 AND BSD-3-Clause",
       "licenseDeclared": "NOASSERTION",
