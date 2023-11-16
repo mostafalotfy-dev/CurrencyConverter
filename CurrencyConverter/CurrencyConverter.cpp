@@ -1,8 +1,8 @@
-﻿#include "ConsoleApplication.h"
 #include <iostream>
+#include "ConsoleApplication.h"
 using namespace App;
-int main(int argc , char* argv[])
+int main(int argc,  char* argv[])
 {
 	ConsoleApplication app(argc, argv);
-    return 0;
+ 
 }

@@ -11,7 +11,6 @@ SDK::HTTP::HTTP(std::string url)
 }
 SDK::HTTP::~HTTP()
 {
-	
 }
 
 SDK::HTTP* SDK::HTTP::send() {
@@ -29,12 +28,16 @@ SDK::HTTP* SDK::HTTP::send() {
 	return this;
 	
 }
-Json::Value SDK::HTTP::json()
+Json::Value SDK::HTTP::json() const 
 {
 	return Utils::Utils::parseJson(responseText);
 }
 std::string SDK::HTTP::text()
 {
+	if (responseText.empty())
+	{
+		throw "Empty Response.";
+	}
 	return responseText;
 }
 SDK::HTTP* SDK::HTTP::setBearer(std::string token)

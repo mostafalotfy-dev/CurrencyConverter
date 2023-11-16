@@ -12,8 +12,8 @@ protected:
     Row_t header = {
     "CurrencyID"
     };
-    Color background_color = Color::green;
-    Color font_background_color = Color::blue;
+    Color background_color = Color::white;
+    Color font_background_color = Color::none;
     void Header();
 public:
     CurrencyTable();

@@ -15,7 +15,7 @@ namespace SDK {
 		~HTTP();
 		HTTP* setBearer(std::string token);
 		HTTP* send() ;
-		Json::Value json();
+		Json::Value json() const;
 		std::string text();
 
 	};
