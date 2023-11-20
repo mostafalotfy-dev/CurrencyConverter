@@ -6,6 +6,7 @@ ConsoleApplication::ConsoleApplication(int argc ,char *argv[]): cmdl(argv)
 	cmdl.parse(argv);
 	request = new SDK::HTTP("https://api.currencyfreaks.com/v2.0/rates/latest?apikey=" + API_KEY);
 	currency_table = new Tables::CurrencyTable();
+	
 	if (argc == 1)
 	{
 		showHelp(true);
@@ -42,8 +43,9 @@ void ConsoleApplication::showHelp(bool show)
 {
 	if (cmdl[{"-h", "--help"}] || show)
 	{
-		Tables::HelpTable table =  Tables::HelpTable();
-		table.print(std::cout);
+		Tables::HelpTable* table = new  Tables::HelpTable();
+		table->print(std::cout);
 		std::cout << std::endl;
+		delete table;
 	}
 }
