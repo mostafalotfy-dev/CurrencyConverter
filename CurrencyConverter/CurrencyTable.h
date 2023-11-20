@@ -2,6 +2,7 @@
 #include "tabulate/table.hpp"
 #include "cpr/cpr.h"
 #include "json/json.h"
+#include <json/value.h>
 using namespace tabulate;
 namespace Tables
 {
@@ -10,7 +11,7 @@ class CurrencyTable :
 {
 protected:
     Row_t header = {
-    "CurrencyID"
+    "CurrencyID","Currency Value"
     };
     Color background_color = Color::white;
     Color font_background_color = Color::none;
@@ -18,7 +19,7 @@ protected:
 public:
     CurrencyTable();
     ~CurrencyTable();
-    void Body(Json::Value body);
+    void rates(Json::Value body);
  
 };
 

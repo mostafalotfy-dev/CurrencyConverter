@@ -1,11 +1,11 @@
 #include "CurrencyTable.h"
-#include <json/value.h>
+
 using namespace Tables;
 CurrencyTable::CurrencyTable()
 {
 	Header();
-	
-	
+
+
 }
 
 CurrencyTable::~CurrencyTable()
@@ -13,18 +13,19 @@ CurrencyTable::~CurrencyTable()
 
 }
 
-void Tables::CurrencyTable::Body(Json::Value body)
+void Tables::CurrencyTable::rates(Json::Value body)
 {
-	auto rates = body["rates"].getMemberNames();
-	for (auto const data : rates)
+	auto rate_members = body["rates"].getMemberNames(); // get the keys of the rates
+
+	Json::Value rates = body["rates"];
+	for (auto& data : rate_members)
 	{
-		Json::FastWriter writer;
-		std::string output = writer.write(data);
-		add_row({ output });
 		
+		std::cout << data << "\t\t" << rates[data] << "\t\t" << std::endl;
 	}
+
 	
-	
+
 }
 
 void CurrencyTable::Header()
@@ -32,7 +33,7 @@ void CurrencyTable::Header()
 	add_row(header).format()
 		.background_color(background_color)
 		.font_background_color(font_background_color);
-	
+
 }
 
 

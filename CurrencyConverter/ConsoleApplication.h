@@ -10,7 +10,7 @@ namespace App {
 	private:
 		argh::parser cmdl;
 		SDK::HTTP* request ;
-		Tables::CurrencyTable currency_table;
+		Tables::CurrencyTable* currency_table = nullptr;
 
 	public:
 		ConsoleApplication(int argc ,char * argv[]);

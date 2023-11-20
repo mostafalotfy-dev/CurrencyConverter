@@ -5,8 +5,6 @@
     "tabulate",
     "cpr",
     "argh",
-    "jsoncpp",
-    "wxwidgets"
-
+    "jsoncpp"
   ]
 }
