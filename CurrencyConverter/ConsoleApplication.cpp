@@ -27,11 +27,11 @@ void ConsoleApplication::listCurrencies()
 	if (cmdl[{"-l", "--list"}])
 	{
 		Json::Value r = request->send()->json();
-		currency_table->print(std::cout);
+		
 		std::cout << std::endl;
 		currency_table->rates(r);
 		
-	
+		currency_table->print(std::cout);
 		
 		
 	}

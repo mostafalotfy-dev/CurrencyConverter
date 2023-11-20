@@ -21,7 +21,7 @@ void Tables::CurrencyTable::rates(Json::Value body)
 	for (auto& data : rate_members)
 	{
 		
-		std::cout << data << "\t\t" << rates[data] << "\t\t" << std::endl;
+		add_row({ data.c_str(),rates[data].asString()});
 	}
 
 	
