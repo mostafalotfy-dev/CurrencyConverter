@@ -1,7 +1,7 @@
 #include "ConsoleApplication.h"
 using namespace App;
 
-ConsoleApplication::ConsoleApplication(int argc ,char *argv[]): cmdl(argv)
+ConsoleApp::ConsoleApp(int argc ,char *argv[]): cmdl(argv)
 {
 	cmdl.parse(argv);
 	request = new SDK::HTTP("https://api.currencyfreaks.com/v2.0/rates/latest?apikey=" + API_KEY);
@@ -12,34 +12,37 @@ ConsoleApplication::ConsoleApplication(int argc ,char *argv[]): cmdl(argv)
 		showHelp(true);
 	}
 	showHelp(false);
-	listCurrencies();
+	rates();
+	showSupported();
+	showSymbols();
 }
 
 
-ConsoleApplication::~ConsoleApplication()
+
+ConsoleApp::~ConsoleApp()
 {
 	delete request;
 	delete currency_table;
 }
 
-void ConsoleApplication::listCurrencies()
+void ConsoleApp::rates()
 {
 	
-	if (cmdl[{"-l", "--list"}])
+	if (cmdl[{"-r", "--rates"}])
 	{
 		Json::Value r = request->send()->json();
 		
 		std::cout << std::endl;
 		currency_table->rates(r);
-		
 		currency_table->print(std::cout);
+		std::cout << std::endl;
 		
 		
 	}
 }
 
 
-void ConsoleApplication::showHelp(bool show)
+void ConsoleApp::showHelp(bool show)
 {
 	if (cmdl[{"-h", "--help"}] || show)
 	{
@@ -49,3 +52,30 @@ void ConsoleApplication::showHelp(bool show)
 		delete table;
 	}
 }
+
+void App::ConsoleApp::showSupported()
+{
+	if (cmdl[{ "-sC", "--supported" }])
+	{
+		request = new SDK::HTTP("https://api.currencyfreaks.com/v2.0/supported-currencies");
+		Json::Value json = request->send()->json();
+		currency_table = new Tables::CurrencyTable();
+
+		currency_table->supportedCurrency(json);
+		currency_table->print(std::cout);
+		std::cout << std::endl;
+	}
+}
+
+void App::ConsoleApp::showSymbols()
+{
+	if (cmdl[{"-s", "--symbols"}])
+	{
+		request = new SDK::HTTP("https://api.currencyfreaks.com/v2.0/currency-symbols");
+		Json::Value json = request->send()->json();
+		currency_table = new Tables::CurrencyTable();
+		currency_table->symbols(json);
+		currency_table->print(std::cout);
+	}
+}
+

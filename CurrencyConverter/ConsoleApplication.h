@@ -4,7 +4,7 @@
 #include "CurrencyTable.h"
 #include "HelpTable.h"
 namespace App {
-	class ConsoleApplication
+	class ConsoleApp
 	{
 		const std::string API_KEY = "70a71fdbff0044e6abcb258300dfb55f";
 	private:
@@ -13,10 +13,12 @@ namespace App {
 		Tables::CurrencyTable* currency_table = nullptr;
 
 	public:
-		ConsoleApplication(int argc ,char * argv[]);
-		~ConsoleApplication();
-		void listCurrencies();
+		ConsoleApp(int argc ,char * argv[]);
+		~ConsoleApp();
+		void rates();
 		void showHelp(bool show);
+		void showSupported();
+		void showSymbols();
 
 
 

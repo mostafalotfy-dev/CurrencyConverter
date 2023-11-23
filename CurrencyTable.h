@@ -4,6 +4,7 @@
 #include "json/json.h"
 #include <json/value.h>
 using namespace tabulate;
+
 namespace Tables
 {
 class CurrencyTable :
@@ -20,9 +21,7 @@ public:
     CurrencyTable();
     ~CurrencyTable();
     void rates(Json::Value body);
-    void supportedCurrency(Json::Value json);
-    void symbols(Json::Value json);
- 
+    void supportedCurrency(Json::Value r);
 };
 
 }
